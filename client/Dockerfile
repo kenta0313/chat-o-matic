@@ -2,14 +2,14 @@ FROM node:12
 WORKDIR /usr/src/app
 
 COPY package.json ./
-COPY yarn.lock ./
+COPY package-lock.json ./
 
-RUN yarn install
+RUN npm install
 
 COPY . .
 
-RUN yarn build
+RUN npm build
 
 EXPOSE 8080
 
-CMD [ "yarn", "build:start" ]
+CMD [ "npm", "build:start" ]
