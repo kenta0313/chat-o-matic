@@ -1,2 +1,2 @@
 # chat-o-matic
-apollo + next.js
+graphql with apollo + react
